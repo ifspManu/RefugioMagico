@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio de Criaturas Magicas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <header>
+        <h1>Refúgio Mágico</h1>
+        <p>Sistema de gerenciamento de criaturas</p>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <h2>Resgatar nova criatura</h2>
+
+            <p class="descricao">
+                Registre uma nova criatura resgatada e defina sua alocação no refúgio.
+            </p>
+
+        
+
+            <div class="grupo">
+                <label for="nome">Nome da criatura</label>
+                <input type="text" id="nome"
+                    placeholder="Digite o nome da criatura" required>
+            </div>
+
+            <div>
+                <div class="grupo">
+                    <label for="especie">Espécie</label>
+
+                    <select id="especie" required>
+                        <option value="">Selecione a espécie</option>
+                        <option value="dragao">Dragão-de-bruma</option>
+                        <option value="fenix">Fênix-cinzenta</option>
+                        <option value="lince">Lince-espectral</option>
+                    </select>
+                </div>
+
+                <div class="grupo">
+                    <label for="periculosidade">
+                        Nível de periculosidade
+                    </label>
+
+                    <select id="periculosidade" required>
+                        <option value="">Selecione o nível</option>
+                        <option value="mansa">Mansa</option>
+                        <option value="cautelosa">Cautelosa</option>
+                        <option value="instavel">Instável</option>
+                        <option value="critica">Crítica</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="dieta">
+                <label for="dieta">Dieta específica</label>
+
+                <textarea id="dieta"
+                    placeholder="Descreva os alimentos e necessidades nutricionais..."
+                    required></textarea>
+            </div>
+
+            <hr>
+
+            <h3>Alocação da criatura</h3>
+
+            <div class="isolamento">
+                <input type="checkbox" id="isolamento">
+                <label for="isolamento">
+                    A criatura necessita de isolamento?
+                </label>
+            </div>
+
+            <div class="grupo">
+
+                <label for="habitat">Habitat disponível</label>
+
+                <select id="habitat">
+                    <option value="">Selecione um habitat</option>
+
+                    <option value="floresta"
+                        data-especies="lince,fenix"
+                        data-niveis="mansa,cautelosa"
+                        data-vagas="3">
+                        Floresta Encantada (3 vagas)
+                    </option>
+
+                    <option value="montanha"
+                        data-especies="dragao"
+                        data-niveis="cautelosa,instavel"
+                        data-vagas="2">
+                        Montanhas Nebulosas (2 vagas)
+                    </option>
+
+                    <option value="santuario"
+                        data-especies="fenix"
+                        data-niveis="mansa,cautelosa,instavel"
+                        data-vagas="1">
+                        Santuário das Cinzas (1 vaga)
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo" id="recintoIndividual">
+
+                <label for="recinto">Recinto individual</label>
+
+                <select id="recinto">
+                    <option value="">Selecione um recinto</option>
+                    <option value="R00">Não Necessita</option>
+                    <option value="R01">Recinto Individual 01</option>
+                    <option value="R02">Recinto Individual 02</option>
+                    <option value="R03">Recinto Individual 03</option>
+                </select>
+
+            </div>
+
+            <hr>
+
+            <h3>Autorização do resgate</h3>
+
+            <div class="grupo">
+                <label for="guardiao">Guardião responsável</label>
+
+                <select id="guardiao" required>
+                    <option value="">Selecione um guardião</option>
+                    <option value="guardiao1">Guardião 01</option>
+                    <option value="guardiao2">Guardião 02</option>
+                    <option value="guardiao3">Guardião 03</option>
+                </select>
+            </div>
+
+            <div class="botoes">
+
+                <button type="reset" class="limpar">
+                    Limpar
+                </button>
+
+                <button type="submit" class="autorizar">
+                    Autorizar resgate
+                </button>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
